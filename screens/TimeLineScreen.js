@@ -1,12 +1,23 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  FlatList,
-  TouchableHighlight,
-  Image,
-} from "react-native";
+import { StyleSheet, View, FlatList } from "react-native";
+
+import { PostCard } from "../components/PostCard";
+
+export function TimeLineScreen() {
+  return (
+    <View style={styles.container}>
+      <FlatList data={DATA} renderItem={({ item }) => <PostCard />} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+    flex: 1,
+    backgroundColor: "#000",
+  },
+});
 
 const DATA = [
   {
@@ -33,32 +44,16 @@ const DATA = [
       updated_at: "2020/06/06",
     },
   },
-];
-
-export function TimeLineScreen() {
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={DATA}
-        renderItem={({ item }) => (
-          <View>
-            <Text>{item.feed.postMessage}</Text>
-            <Image
-              source={{ uri: "https://source.unsplash.com/random" }}
-              style={{ width: 66, height: 58 }}
-            />
-          </View>
-        )}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+  {
+    user: {
+      userName: "togamin",
+      userImage: "../assets/togamin.JPG",
+    },
+    feed: {
+      postImg: "../assets/post02.jpg",
+      postMessage: "綺麗な場所で寝たいなぁ",
+      created_at: "2020/05/05",
+      updated_at: "2020/06/06",
+    },
   },
-});
+];
