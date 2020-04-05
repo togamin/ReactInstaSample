@@ -2,24 +2,25 @@ import React from "react";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import { StyleSheet, View, Text, Image } from "react-native";
 
-export function PostCard() {
+export function PostCard(props) {
   return (
     <TouchableHighlight>
       <View style={styles.listItem}>
         <Image
-          source={{ uri: "https://source.unsplash.com/random" }}
+          source={{ uri: props.userImg }}
           style={styles.userImg}
           resizeMode="cover"
         />
+        <Text>{props.userName}</Text>
         <Image
-          source={{ uri: "https://source.unsplash.com/random" }}
+          source={{ uri: props.postImg }}
           style={styles.postImg}
           resizeMode="cover"
         />
 
         <View style={styles.messageView}>
-          <Text style={styles.messageText}>綺麗な場所で寝ました</Text>
-          <Text style={styles.createdDay}>2020/04/05</Text>
+          <Text style={styles.messageText}>{props.postMessage}</Text>
+          <Text style={styles.createdDay}>{props.createdDay}</Text>
         </View>
       </View>
     </TouchableHighlight>
