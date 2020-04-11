@@ -11,7 +11,7 @@ export function TimeLineStackNav() {
       screenOptions={{
         headerTintColor: appColor.subColor,
         headerStyle: {
-          backgroundColor: appColor.headerColor,
+          backgroundColor: appColor.mainColor,
         },
       }}
       headerMode="float"

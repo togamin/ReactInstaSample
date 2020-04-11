@@ -12,9 +12,9 @@ export function TimeLineScreen() {
           <PostCard
             userImg={item.user.userImg}
             userName={item.user.userName}
-            createdDay={item.feed.created_at}
-            postImg={item.feed.postImg}
-            postMessage={item.feed.postMessage}
+            createdDay={item.post.created_at}
+            postImg={item.post.postImg}
+            postMessage={item.post.postMessage}
           />
         )}
       />
@@ -34,10 +34,13 @@ const styles = StyleSheet.create({
 const DATA = [
   {
     user: {
+      userID: "u0",
       userName: "togamin",
-      userImg: "https://source.unsplash.com/random",
+      userImg:
+        "https://www.pokemon.co.jp/ex/sword_shield/assets/pokemon/pokemon_190605_03@2x.png",
     },
-    feed: {
+    post: {
+      postID: "p0",
       postImg: "https://source.unsplash.com/random",
       postMessage: "綺麗な場所で寝ました",
       created_at: "2020/04/05",
@@ -46,10 +49,12 @@ const DATA = [
   },
   {
     user: {
+      userID: "u1",
       userName: "togamin",
       userImg: "https://source.unsplash.com/random",
     },
-    feed: {
+    post: {
+      postID: "p1",
       postImg: "https://source.unsplash.com/random",
       postMessage: "綺麗な場所で寝たいなぁ",
       created_at: "2020/05/05",
@@ -58,10 +63,12 @@ const DATA = [
   },
   {
     user: {
+      userID: "u2",
       userName: "togamin",
       userImg: "https://source.unsplash.com/random",
     },
-    feed: {
+    post: {
+      postID: "p2",
       postImg: "https://source.unsplash.com/random",
       postMessage:
         "綺麗な場所で寝たいなぁと思った日々ですぅぅぅぅぅぅぅぅぅぅぅぅぅぅぅぅぅ",
