@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
 } from "react-native";
 import { appColor } from "../setting/SettingColor";
+import { AuthBtn } from "../components/AuthBtn";
 
 export function SignInScreen({ navigation }) {
   const [mail, setMail] = useState();
@@ -25,11 +26,7 @@ export function SignInScreen({ navigation }) {
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-      <TouchableHighlight>
-        <View>
-          <Text style={styles.loginBtn}>ログイン</Text>
-        </View>
-      </TouchableHighlight>
+      <AuthBtn btnName="ログイン" />
       <TouchableHighlight onPress={() => navigation.navigate("SignUp")}>
         <Text style={styles.addAcountText}>新規アカウント作成</Text>
       </TouchableHighlight>
@@ -53,16 +50,6 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     borderWidth: 1,
     borderColor: "#ddd",
-  },
-  loginBtn: {
-    width: "50%",
-    marginTop: 18,
-    marginLeft: "auto",
-    marginRight: "auto",
-    borderRadius: 3,
-    padding: 12,
-    color: "white",
-    backgroundColor: "#1e90ff",
   },
   addAcountText: {
     color: "#999",

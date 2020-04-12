@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-  TouchableHighlight,
-} from "react-native";
+import { StyleSheet, View, TextInput } from "react-native";
 import { appColor } from "../setting/SettingColor";
+import { AuthBtn } from "../components/AuthBtn";
 
 export function SignUpScreen() {
   const [mail, setMail] = useState();
@@ -25,11 +20,7 @@ export function SignUpScreen() {
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-      <TouchableHighlight>
-        <View>
-          <Text style={styles.loginBtn}>新規作成</Text>
-        </View>
-      </TouchableHighlight>
+      <AuthBtn btnName="新規作成" />
     </View>
   );
 }
@@ -50,16 +41,6 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     borderWidth: 1,
     borderColor: "#ddd",
-  },
-  loginBtn: {
-    width: "50%",
-    marginTop: 18,
-    marginLeft: "auto",
-    marginRight: "auto",
-    borderRadius: 3,
-    padding: 12,
-    color: "white",
-    backgroundColor: "#1e90ff",
   },
   addAcountText: {
     color: "#999",
