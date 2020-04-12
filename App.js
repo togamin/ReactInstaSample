@@ -1,7 +1,7 @@
 import React from "react";
 import { TabNav } from "./navigations/TabNav";
-import { LoginScreen } from "./screens/LoginScreen";
+import { AuthStackNav } from "./navigations/AuthStackNav";
 
 export default function App() {
-  return <LoginScreen /> /*<TabNav />*/;
+  return <AuthStackNav /> /* <TabNav />*/;
 }

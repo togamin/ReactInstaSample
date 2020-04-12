@@ -9,7 +9,7 @@ export function ProfileStackNav() {
   return (
     <ProfileStack.Navigator
       screenOptions={{
-        headerTintColor: appColor.subColor,
+        headerTintColor: appColor.subTextColor,
         headerStyle: {
           backgroundColor: appColor.mainColor,
         },

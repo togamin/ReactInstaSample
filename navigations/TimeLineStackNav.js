@@ -9,7 +9,7 @@ export function TimeLineStackNav() {
   return (
     <TimeLineStack.Navigator
       screenOptions={{
-        headerTintColor: appColor.subColor,
+        headerTintColor: appColor.subTextColor,
         headerStyle: {
           backgroundColor: appColor.mainColor,
         },

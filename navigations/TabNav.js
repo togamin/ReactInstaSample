@@ -26,8 +26,8 @@ export function TabNav() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: appColor.subColor,
-          inactiveTintColor: appColor.subColor,
+          activeTintColor: appColor.subTextColor,
+          inactiveTintColor: appColor.subTextColor,
           activeBackgroundColor: appColor.activeTabColor,
           inactiveBackgroundColor: appColor.tabColor,
         }}

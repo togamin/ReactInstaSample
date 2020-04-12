@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { appColor } from "../setting/SettingColor";
 
-export function LoginScreen() {
+export function SignInScreen({ navigation }) {
   const [mail, setMail] = useState();
   const [password, setPassword] = useState();
   return (
@@ -30,7 +30,7 @@ export function LoginScreen() {
           <Text style={styles.loginBtn}>ログイン</Text>
         </View>
       </TouchableHighlight>
-      <TouchableHighlight>
+      <TouchableHighlight onPress={() => navigation.navigate("SignUp")}>
         <Text style={styles.addAcountText}>新規アカウント作成</Text>
       </TouchableHighlight>
     </View>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "center",
     padding: 18,
-    backgroundColor: appColor.mainColor,
+    backgroundColor: appColor.subColor,
   },
   textInput: {
     margin: 9,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#1e90ff",
   },
   addAcountText: {
-    color: "white",
+    color: "#999",
     margin: 9,
   },
 });
