@@ -10,6 +10,12 @@ export function SignUpScreen() {
     <View style={styles.container}>
       <TextInput
         style={styles.textInput}
+        placeholder="ユーザー名"
+        value={mail}
+        onChangeText={(text) => setMail(text)}
+      />
+      <TextInput
+        style={styles.textInput}
         placeholder="メールアドレス"
         value={mail}
         onChangeText={(text) => setMail(text)}
